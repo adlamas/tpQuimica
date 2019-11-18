@@ -1,0 +1,89 @@
+
+<div style="text-align: center">
+  <h1 style="margin-bottom: 50px; margin-top: 50px;"> Leyes de gases ideales</h1>
+  <img src="img/untref.png">
+</div>
+<div class="container" style="text-align: center;">
+  <h3 style="text-align: center;">Descripcion:</h3>
+  <h4>
+    Se tienen diferentes botones en dos secciones. Las secciones tratan de las magnitudes fisicas que componen las leyes quimicas mas abajo explicadas.
+    Lo que se busca, con este trabajo, es darle una facil opcion para los alumnos de recordar e internalizar los diferentes elementos que hacen esta
+    unidad, teniendo todos estos juntos y con una breve explicacion de cada uno.
+  </h4>
+
+
+</div>
+
+
+<h1 style="text-align: center; margin-bottom: 50px; margin-top: 50px;">Magnitudes</h1>
+<div class="container-fluid centered" style="text-align: center;">
+  <button id="presion" class="btn btn-primary btn-lg magnitud" data-toggle="modal" data-target="#modalMagnitud">Presion</button>
+  <button id="volumen" class="btn btn-secondary btn-lg magnitud" data-toggle="modal" data-target="#modalMagnitud">Volumen</button>
+  <button id="temperatura" class="btn btn-success btn-lg magnitud" data-toggle="modal" data-target="#modalMagnitud">Termperatura</button>
+  <button id="n_moles" class="btn btn-danger btn-lg magnitud" data-toggle="modal" data-target="#modalMagnitud">Numero de moles</button>
+  <button id="const_gases" class="btn btn-info btn-lg magnitud" data-toggle="modal" data-target="#modalMagnitud">Constante de gases</button>
+  <button id="densidad" class="btn btn-warning btn-lg magnitud" data-toggle="modal" data-target="#modalMagnitud">Densidad</button>
+<div>
+
+
+<h1 style="text-align: center; margin-bottom: 50px; margin-top: 50px;">Formulas de los gases ideales</h1>
+  <div class="container-fluid centered" style="text-align: center;">
+    <button id="ley-de-boyle" class="btn btn-primary btn-lg ley" data-toggle="modal" data-target="#modalLey">Ley de Boyle</button>
+    <button id="ley-de-charles" class="btn btn-secondary btn-lg ley" data-toggle="modal" data-target="#modalLey">Ley de Charles</button>
+    <button id="ley_de_avogadro" class="btn btn-success btn-lg ley" data-toggle="modal" data-target="#modalLey">Ley de Avogadro</button>
+    <button id="eq_gas_ideal" class="btn btn-danger btn-lg ley" data-toggle="modal" data-target="#modalLey">Ecuacion de gas ideal</button>
+    <button id="ley_de_dalton" class="btn btn-info btn-lg ley" data-toggle="modal" data-target="#modalLey">Ley de Dalton</button>
+    <button id="ley_de_graham" class="btn btn-warning btn-lg ley" data-toggle="modal" data-target="#modalLey">Ley de Graham</button>
+  <div>
+
+<!-- Modal de magnitudes !-->
+<div class="modal fade" id="modalMagnitud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMagnitudLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="body-descripcion">
+      </div>
+      <div class="modal-body" id="body-ecuaciones">
+      </div>
+      <div class="modal-body" id="">
+        <img src="" width="100%" id="img-magnitud">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de leyes !-->
+<div class="modal fade" id="modalLey" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMagnitudLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="body-descripcion-ley">
+      </div>
+      <div class="modal-body" id="">
+        <img src="" width="100%" id="img-ley">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">.
+<script src="jquery.js"></script>
+<script src="bootstrap4/js/bootstrap.js"></script>
+<script src="js/ajax_functions.js"></script>
