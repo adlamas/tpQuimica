@@ -1,7 +1,6 @@
 
-//Magnitudes
-
-$(".magnitud").click(function(){
+/*
+  $(".magnitud").click(function(){
   button_id = this.id;
   button_text = $(this).text();
   $.ajax({
@@ -18,20 +17,9 @@ $(".magnitud").click(function(){
     );
   });
 });
+*/
 
 
-//Leyes
-
-$(".ley").click(function(){
-  button_id = this.id;
-  button_text = $(this).text();
-  $.ajax({
-    url: "js/" + button_id + ".js",
-    method: "GET",
-  }).done(function(data) {
-    console.log(data['descripcion']);
-    $('.modal-title').text(JSON.parse(data)['nombre']);
-    $('#img-ley').attr('src', 'img/' + button_id + '.jpg');
-    $('#body-descripcion-ley').text(JSON.parse(data)['descripcion']);
-  });
+$("#boyle_c").click(function(){
+  $("#boyle_text").append('holis');
 });
