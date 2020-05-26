@@ -1,15 +1,23 @@
-
-import * as calculosDalton from '/calculos/dalton';
-
+$.getScript("/js/calculos/boyle.js", function() {});
+//$.getScript("/js/calculos/dalton.js", function() {});
+//$.getScript("/js/calculos/ideales.js", function() {});
 
 $("#calculadoraLeyDeBoyle").click(function(){
   $("#cuerpo_calculadora").html(""+
-  "<input type='number' placeholder='500' id='BoyleNumero1'>"+
-  "<input type='number' placeholder='300' id='BoyleNumero2'>"+
-  "<button class='btn btn-primary' id='calcularLeyDeBoyle'>Calcular Boyle</button>"+
+  "Presion Inicial(ATM) <input type='number' placeholder='500' id='presionInicialBoyle'><br>"+
+  "Presion Final(ATM) <input type='number' placeholder='300' id='presionFinalBoyle'><br>"+
+  "Volumen Inicial(L) <input type='number' placeholder='300' id='volumenInicialBoyle'><br>"+
+  "Volumen Final(L) <input type='number' placeholder='300' id='volumenFinalBoyle'><br><br>"+
+
+  "<button class='btn btn-primary' id='calcularPresionInicialBoyle'>Presion inicial</button><br><br>"+
+  "<button class='btn btn-primary' id='calcularPresionFinalBoyle'>Presion final</button><br><br>"+
+  "<button class='btn btn-primary' id='calcularVolumenInicialBoyle'>Volumen inicial</button><br><br>"+
+  "<button class='btn btn-primary' id='calcularVolumenFinalBoyle'>Volumen final</button><br><br>"+
   "");
 
-  calculosDalton.alertar();
+  $(document).ready(function(){
+    calcularBoyle();
+  });
 });
 
 $("#calculadoraLeyDeCharles").click(function(){
@@ -23,19 +31,3 @@ $("#calculadoraLeyDeCharles").click(function(){
     calcularLeyDeCharles();
   });
 });
-
-$("#calcularLeyDeBoyle").click(function(){
-  var numero1 = parseInt($("#BoyleNumero1").val());
-  var numero2 = parseInt($("#BoyleNumero2").val());
-  var numeroFinal = numero1 + numero2;
-  $("#cuerpo_calculadora").append('<p>La suma de los dos numeros es: ' + numeroFinal + "</p>");
-});
-
-function calcularLeyDeCharles(){
-  $("#calcularLeyDeDalton").click(function(){
-    var numero1 = parseInt($("#DaltonNumero1").val());
-    var numero2 = parseInt($("#DaltonNumero2").val());
-    var numeroFinal = numero1 / numero2;
-    $("#cuerpo_calculadora").append('<p>La suma de los dos numeros para Dalton es: ' + numeroFinal + "</p>");
-  });
-}
