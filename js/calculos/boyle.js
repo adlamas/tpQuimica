@@ -1,42 +1,42 @@
 
 function calcularBoyle(){
   $('#calcularPresionInicialBoyle').click(function(){
-    var presionFinal = parseInt($("#presionFinalBoyle").val());
-    var volumenInicial = parseInt($("#volumenInicialBoyle").val());
-    var volumenFinal = parseInt($("#volumenFinalBoyle").val());
+    var presionFinal = parseFloat($("#presionFinalBoyle").val());
+    var volumenInicial = parseFloat($("#volumenInicialBoyle").val());
+    var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
 
     var presionInicial = (presionFinal * volumenFinal) / volumenInicial;
-    alert("La presion inicial es: " + presionInicial);
+    alert("La presion inicial es: " + presionInicial + "atm");
 
   });
 
   $('#calcularPresionFinalBoyle').click(function(){
-    var presionInicial = parseInt($("presionInicialBoyle").val());
-    var volumenInicial = parseInt($("volumenInicialBoyle").val());
-    var volumenFinal = parseInt($("volumenFinalBoyle").val());
+    var presionInicial = parseFloat($("#presionInicialBoyle").val());
+    var volumenInicial = parseFloat($("#volumenInicialBoyle").val());
+    var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
 
     var presionFinal = (presionInicial * volumenInicial) / volumenFinal;
-    alert("La presion final es: " + presionFinal);
+    alert("La presion final es: " + presionFinal + "atm");
 
   });
 
   $('#calcularVolumenInicialBoyle').click(function(){
-    var presionFinal = parseInt($("presionFinalBoyle").val());
-    var presionInicial = parseInt($("presionInicialBoyle").val());
-    var volumenFinal = parseInt($("volumenFinalBoyle").val());
+    var presionFinal = parseFloat($("#presionFinalBoyle").val());
+    var presionInicial = parseFloat($("#presionInicialBoyle").val());
+    var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
 
     var volumenInicial = (presionFinal * volumenInicial) / presionInicial;
-    alert("El volumen inicial es: " + volumenInicial);
+    alert("El volumen inicial es: " + volumenInicial + "l");
 
   });
 
   $('#calcularVolumenFinalBoyle').click(function(){
-    var presionFinal = parseInt($("presionFinalBoyle").val());
-    var volumenInicial = parseInt($("volumenInicialBoyle").val());
-    var presionInicial = parseInt($("presionInicialBoyle").val());
+    var presionFinal = parseFloat($("#presionFinalBoyle").val());
+    var volumenInicial = parseFloat($("#volumenInicialBoyle").val());
+    var presionInicial = parseFloat($("#presionInicialBoyle").val());
 
     var volumenFinal = (presionInicial * volumenInicial) / presionFinal
-    alert("El volumen final es: " + volumenFinal);
+    alert("El volumen final es: " + volumenFinal + "l");
 
   });
 
