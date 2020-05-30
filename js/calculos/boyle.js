@@ -6,7 +6,7 @@ function calcularBoyle(){
     var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
 
     var presionInicial = (presionFinal * volumenFinal) / volumenInicial;
-    alert("La presion inicial es: " + presionInicial + " ATM");
+    alert("La presion inicial es: " + presionInicial + "ATM");
 
   });
 
@@ -16,7 +16,7 @@ function calcularBoyle(){
     var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
 
     var presionFinal = (presionInicial * volumenInicial) / volumenFinal;
-    alert("La presion final es: " + presionFinal + " ATM");
+    alert("La presion final es: " + presionFinal + "ATM");
 
   });
 
@@ -36,7 +36,7 @@ function calcularBoyle(){
     var presionInicial = parseFloat($("#presionInicialBoyle").val());
 
     var volumenFinal = (presionInicial * volumenInicial) / presionFinal
-    alert("El volumen final es: " + volumenFinal + " L");
+    alert("El volumen final es: " + volumenFinal + "L");
 
   });
 

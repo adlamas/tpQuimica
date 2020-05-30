@@ -1,6 +1,6 @@
 $.getScript("/js/calculos/boyle.js", function() {});
 $.getScript("/js/calculos/charles.js", function() {});
-//$.getScript("/js/calculos/dalton.js", function() {});
+//$.getScript("/js/calculos/avogadro.js", function() {});
 //$.getScript("/js/calculos/ideales.js", function() {});
 
 $("#calculadoraLeyDeBoyle").click(function(){
