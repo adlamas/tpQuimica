@@ -1,7 +1,8 @@
 $.getScript("/js/calculos/boyle.js", function() {});
 $.getScript("/js/calculos/charles.js", function() {});
-//$.getScript("/js/calculos/avogadro.js", function() {});
-//$.getScript("/js/calculos/ideales.js", function() {});
+$.getScript("/js/calculos/ideales.js", function() {});
+
+// Calculadora de Ley de Boyle
 
 $("#calculadoraLeyDeBoyle").click(function(){
   $("#cuerpo_calculadora").html(""+
@@ -21,6 +22,8 @@ $("#calculadoraLeyDeBoyle").click(function(){
   });
 });
 
+// Calculadora de Ley de Charles
+
 $("#calculadoraLeyDeCharles").click(function(){
   $("#cuerpo_calculadora").html(""+
   "Temperatura Inicial(K) <input type='number' placeholder='500' id='temperaturaInicialCharles' step='any'><br>"+
@@ -36,5 +39,25 @@ $("#calculadoraLeyDeCharles").click(function(){
 
   $(document).ready(function(){
     calcularCharles();
+  });
+});
+
+// Calculadora de Ley de Gases Ideales
+
+$("#calculadoraLeyDeGasesIdeales").click(function(){
+  $("#cuerpo_calculadora").html(""+
+  "Numero de moles <input type='number' placeholder='2300' id='numeroMolesGasesIdeales' step='any'><br>"+
+  "Volumen(L) <input type='number' placeholder='300' id='volumenGasesIdeales' step='any'><br>"+
+  "Presion(ATM) <input type='number' placeholder='300' id='presionGasesIdeales' step='any'><br>"+
+  "Temperatura(K) <input type='number' placeholder='300' id='temperaturaGasesIdeales' step='any'><br>"+
+
+  "<button class='btn btn-primary' id='calcularVolumenGasesIdeales'>Volumen </button><br><br>"+
+  "<button class='btn btn-primary' id='calcularNumeroMolesGasesIdeales'>Numero moles</button><br><br>"+
+  "<button class='btn btn-primary' id='calcularPresionGasesIdeales'>Volumen </button><br><br>"+
+  "<button class='btn btn-primary' id='calcularTemperaturaGasesIdeales'>Numero moles</button><br><br>"+
+  "");
+
+  $(document).ready(function(){
+    calcularGasesIdeales();
   });
 });
