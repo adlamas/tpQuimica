@@ -1,6 +1,6 @@
 function calcularCharles(){
   $('#calcularTemperaturaInicialCharles').click(function(){
-    var temperaturaFinal = parseFloat($("#presionFinalCharles").val());
+    var temperaturaFinal = parseFloat($("#temperaturaFinalCharles").val());
     var volumenInicial = parseFloat($("#volumenInicialCharles").val());
     var volumenFinal = parseFloat($("#volumenFinalCharles").val());
 
@@ -10,7 +10,7 @@ function calcularCharles(){
   });
 
   $('#calcularTemperaturaFinalCharles').click(function(){
-    var temperaturaInicial = parseFloat($("#presionFinalCharles").val());
+    var temperaturaInicial = parseFloat($("#temperaturaInicialCharles").val());
     var volumenInicial = parseFloat($("#volumenInicialCharles").val());
     var volumenFinal = parseFloat($("#volumenFinalCharles").val());
 
@@ -20,7 +20,7 @@ function calcularCharles(){
   });
 
   $('#calcularVolumenInicialCharles').click(function(){
-    var temperaturaInicial = parseFloat($("#presionFinalCharles").val());
+    var temperaturaInicial = parseFloat($("#temperaturaInicialCharles").val());
     var temperaturaFinal = parseFloat($("#volumenInicialCharles").val());
     var volumenFinal = parseFloat($("#volumenFinalCharles").val());
 
@@ -30,7 +30,7 @@ function calcularCharles(){
   });
 
   $('#calcularVolumenFinalCharles').click(function(){
-    var temperaturaInicial = parseFloat($("#presionFinalCharles").val());
+    var temperaturaInicial = parseFloat($("#temperaturaInicialCharles").val());
     var temperaturaFinal = parseFloat($("#volumenInicialCharles").val());
     var volumenInicial = parseFloat($("#volumenFinalCharles").val());
 

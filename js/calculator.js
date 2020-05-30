@@ -23,15 +23,15 @@ $("#calculadoraLeyDeBoyle").click(function(){
 
 $("#calculadoraLeyDeCharles").click(function(){
   $("#cuerpo_calculadora").html(""+
-  "Temperatura Inicial(K) <input type='number' placeholder='500' id='temperaturaInicialBoyle' step='any'><br>"+
-  "Temperatura Final(K) <input type='number' placeholder='300' id='temperaturaFinalBoyle' step='any'><br>"+
-  "Volumen Inicial(L) <input type='number' placeholder='300' id='volumenInicialBoyle' step='any'><br>"+
-  "Volumen Final(L) <input type='number' placeholder='300' id='volumenFinalBoyle' step='any'><br><br>"+
+  "Temperatura Inicial(K) <input type='number' placeholder='500' id='temperaturaInicialCharles' step='any'><br>"+
+  "Temperatura Final(K) <input type='number' placeholder='300' id='temperaturaFinalCharles' step='any'><br>"+
+  "Volumen Inicial(L) <input type='number' placeholder='300' id='volumenInicialCharles' step='any'><br>"+
+  "Volumen Final(L) <input type='number' placeholder='300' id='volumenFinalCharles' step='any'><br><br>"+
 
-  "<button class='btn btn-primary' id='calcularPresionInicialBoyle'>Presion inicial</button><br><br>"+
-  "<button class='btn btn-primary' id='calcularPresionFinalBoyle'>Presion final</button><br><br>"+
-  "<button class='btn btn-primary' id='calcularVolumenInicialBoyle'>Volumen inicial</button><br><br>"+
-  "<button class='btn btn-primary' id='calcularVolumenFinalBoyle'>Volumen final</button><br><br>"+
+  "<button class='btn btn-primary' id='calcularTemperaturaInicialCharles'>Temperatura inicial</button><br><br>"+
+  "<button class='btn btn-primary' id='calcularTemperaturaFinalCharles'>Temperatura final</button><br><br>"+
+  "<button class='btn btn-primary' id='calcularVolumenInicialCharles'>Volumen inicial</button><br><br>"+
+  "<button class='btn btn-primary' id='calcularVolumenFinalCharles'>Volumen final</button><br><br>"+
   "");
 
   $(document).ready(function(){
