@@ -1,3 +1,4 @@
+$.getScript("/js/calculos/chequearValores.js", function() {});
 
 function calcularGasesIdeales(){
 
@@ -8,9 +9,13 @@ function calcularGasesIdeales(){
     var temperatura = parseFloat($("#temperaturaGasesIdeales").val());
     var numeroMoles = parseFloat($("#numeroMolesGasesIdeales").val());
 
-    var presion = ( numeroMoles * R * temperatura) / volumen;
-    alert("La presion es: " + presion + "ATM");
-
+    if(chequearValores([volumen, temperatura, numeroMoles]) != true){
+      alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    }
+    else{
+      var presion = ( numeroMoles * R * temperatura) / volumen;
+      alert("La presion es: " + presion + "ATM");
+    }
   });
 
   $('#calcularVolumenGasesIdeales').click(function(){
@@ -18,9 +23,13 @@ function calcularGasesIdeales(){
     var temperatura = parseFloat($("#temperaturaGasesIdeales").val());
     var numeroMoles = parseFloat($("#numeroMolesGasesIdeales").val());
 
-    var volumen = ( numeroMoles * R * temperatura) / presion;
-    alert("El volumen es : " + volumen + "L");
-
+    if(chequearValores([presion, temperatura, numeroMoles]) != true){
+      alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    }
+    else{
+      var volumen = ( numeroMoles * R * temperatura) / presion;
+      alert("El volumen es : " + volumen + "L");
+    }
   });
 
   $('#calcularTemperaturaGasesIdeales').click(function(){
@@ -28,9 +37,13 @@ function calcularGasesIdeales(){
     var volumen = parseFloat($("#volumenGasesIdeales").val());
     var numeroMoles = parseFloat($("#numeroMolesGasesIdeales").val());
 
-    var temperatura = (presion * volumen) / (numeroMoles * R);
-    alert("La temperatura es: " + temperatura + "K");
-
+    if(chequearValores([presion, volumen, numeroMoles]) != true){
+      alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    }
+    else{
+      var temperatura = (presion * volumen) / (numeroMoles * R);
+      alert("La temperatura es: " + temperatura + "K");
+    }
   });
 
   $('#calcularNumeroMolesGasesIdeales').click(function(){
@@ -38,9 +51,13 @@ function calcularGasesIdeales(){
     var volumen = parseFloat($("#volumenGasesIdeales").val());
     var temperatura = parseFloat($("#temperaturaGasesIdeales").val());
 
-    var numeroMoles = (presion * volumen) / (temperatura * R);
-    alert("El numero de moles que hay es: " + numeroMoles);
-
+    if(chequearValores([presion, volumen, temperatura]) != true){
+      alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    }
+    else{
+      var numeroMoles = (presion * volumen) / (temperatura * R);
+      alert("El numero de moles que hay es: " + numeroMoles);
+    }
   });
 
 }

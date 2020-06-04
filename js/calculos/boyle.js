@@ -1,3 +1,4 @@
+$.getScript("/js/calculos/chequearValores.js", function() {});
 
 function calcularBoyle(){
   $('#calcularPresionInicialBoyle').click(function(){
@@ -5,9 +6,13 @@ function calcularBoyle(){
     var volumenInicial = parseFloat($("#volumenInicialBoyle").val());
     var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
 
-    var presionInicial = (presionFinal * volumenFinal) / volumenInicial;
-    alert("La presion inicial es: " + presionInicial + "ATM");
-
+    if(chequearValores([presionFinal, volumenInicial, volumenFinal]) != true){
+      alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    }
+    else{
+      var presionInicial = (presionFinal * volumenFinal) / volumenInicial;
+      alert("La presion inicial es: " + presionInicial + "ATM");
+    }
   });
 
   $('#calcularPresionFinalBoyle').click(function(){
@@ -15,8 +20,13 @@ function calcularBoyle(){
     var volumenInicial = parseFloat($("#volumenInicialBoyle").val());
     var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
 
-    var presionFinal = (presionInicial * volumenInicial) / volumenFinal;
-    alert("La presion final es: " + presionFinal + "ATM");
+    if(chequearValores([presionInicial, volumenInicial, volumenFinal]) != true){
+      alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    }
+    else{
+      var presionFinal = (presionInicial * volumenInicial) / volumenFinal;
+      alert("La presion final es: " + presionFinal + "ATM");
+    }
 
   });
 
@@ -25,9 +35,13 @@ function calcularBoyle(){
     var presionInicial = parseFloat($("#presionInicialBoyle").val());
     var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
 
-    var volumenInicial = (presionFinal * volumenFinal) / presionInicial;
-    alert("El volumen inicial es: " + volumenInicial + "L");
-
+    if(chequearValores([presionInicial, presionFinal, volumenFinal]) != true){
+      alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    }
+    else{
+      var volumenInicial = (presionFinal * volumenFinal) / presionInicial;
+      alert("El volumen inicial es: " + volumenInicial + "L");
+    }
   });
 
   $('#calcularVolumenFinalBoyle').click(function(){
@@ -35,9 +49,12 @@ function calcularBoyle(){
     var volumenInicial = parseFloat($("#volumenInicialBoyle").val());
     var presionInicial = parseFloat($("#presionInicialBoyle").val());
 
-    var volumenFinal = (presionInicial * volumenInicial) / presionFinal
-    alert("El volumen final es: " + volumenFinal + "L");
-
+    if(chequearValores([presionInicial, volumenInicial, presionFinal]) != true){
+      alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    }
+    else{
+      var volumenFinal = (presionInicial * volumenInicial) / presionFinal
+      alert("El volumen final es: " + volumenFinal + "L");
+    }
   });
-
 }
