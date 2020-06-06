@@ -31,7 +31,7 @@ function calcularCharles(){
 
   $('#calcularVolumenInicialCharles').click(function(){
     var temperaturaInicial = parseFloat($("#temperaturaInicialCharles").val());
-    var temperaturaFinal = parseFloat($("#volumenInicialCharles").val());
+    var temperaturaFinal = parseFloat($("#temperaturaFinalCharles").val());
     var volumenFinal = parseFloat($("#volumenFinalCharles").val());
 
     if(chequearValores([temperaturaInicial, volumenFinal, temperaturaFinal]) != true){
@@ -45,8 +45,8 @@ function calcularCharles(){
 
   $('#calcularVolumenFinalCharles').click(function(){
     var temperaturaInicial = parseFloat($("#temperaturaInicialCharles").val());
-    var temperaturaFinal = parseFloat($("#volumenInicialCharles").val());
-    var volumenInicial = parseFloat($("#volumenFinalCharles").val());
+    var temperaturaFinal = parseFloat($("#temperaturaFinalCharles").val());
+    var volumenInicial = parseFloat($("#volumenInicialCharles").val());
 
     if(chequearValores([temperaturaInicial, volumenInicial, temperaturaFinal]) != true){
       alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");

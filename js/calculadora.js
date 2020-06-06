@@ -7,10 +7,10 @@ $.getScript("/js/calculos/ideales.js", function() {});
 $("#calculadoraLeyDeBoyle").click(function(){
   $("#cuerpo_calculadora").html(""+
   "<h2>Calcular ley de Boyle</h2><br>" +
-  "<div>Presion Inicial(ATM) <input type='number' placeholder='1' id='presionInicialBoyle'></div><br>"+
-  "<div>Presion Final(ATM) <input type='number' placeholder='2' id='presionFinalBoyle'></div><br>"+
-  "<div>Volumen Inicial(L) <input type='number' placeholder='2' id='volumenInicialBoyle'></div><br>"+
-  "<div>Volumen Final(L) <input type='number' placeholder='1,5' id='volumenFinalBoyle'></div><br><br>"+
+  "<div>Presion Inicial(ATM) <input type='number' placeholder='1' id='presionInicialBoyle' step='any'></div><br>"+
+  "<div>Presion Final(ATM) <input type='number' placeholder='2' id='presionFinalBoyle' step='any'></div><br>"+
+  "<div>Volumen Inicial(L) <input type='number' placeholder='2' id='volumenInicialBoyle' step='any'></div><br>"+
+  "<div>Volumen Final(L) <input type='number' placeholder='1,5' id='volumenFinalBoyle' step='any'></div><br><br>"+
 
   "<button class='btn btn-primary' id='calcularPresionInicialBoyle'>Calcular presion inicial</button><br><br>"+
   "<button class='btn btn-primary' id='calcularPresionFinalBoyle'>Calcular presion final</button><br><br>"+
@@ -28,7 +28,7 @@ $("#calculadoraLeyDeBoyle").click(function(){
 $("#calculadoraLeyDeCharles").click(function(){
   $("#cuerpo_calculadora").html(""+
   "<h2>Calcular ley de Charles</h2><br>" +
-  "<div>Temperatura Inicial(K) <input type='number' placeholder='500' id='temperaturaInicialCharles'></div><br>"+
+  "<div>Temperatura Inicial(K) <input type='number' placeholder='500' id='temperaturaInicialCharles' step='any'></div><br>"+
   "<div>Temperatura Final(K) <input type='number' placeholder='350' id='temperaturaFinalCharles' step='any'></div><br>"+
   "<div>Volumen Inicial(L) <input type='number' placeholder='2' id='volumenInicialCharles' step='any'></div><br>"+
   "<div>Volumen Final(L) <input type='number' placeholder='1,5' id='volumenFinalCharles' step='any'></div><br><br>"+
