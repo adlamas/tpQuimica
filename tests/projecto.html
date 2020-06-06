@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>QUnit Tests</title>
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.14.0.css">
+    <script src="http://code.jquery.com/qunit/qunit-1.14.0.js"></script>
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <input id='btnSubmit' type='button' hidden='hidden'/>
+    <script src="/js/calculos/boyle.js"></script>
+
+    <div>Presion Inicial(ATM) <input type='number' placeholder='1' id='presionInicialBoyle' step='any'></div><br>
+    <div>Presion Final(ATM) <input type='number' placeholder='2' id='presionFinalBoyle' step='any'></div><br>
+    <div>Volumen Inicial(L) <input type='number' placeholder='2' id='volumenInicialBoyle' step='any'></div><br>
+    <div>Volumen Final(L) <input type='number' placeholder='1,5' id='volumenFinalBoyle' step='any'></div><br><br>
+
+    <button class='btn btn-primary' id='calcularPresionInicialBoyle'>Calcular presion inicial</button><br><br>
+    <button class='btn btn-primary' id='calcularPresionFinalBoyle'>Calcular presion final</button><br><br>
+    <button class='btn btn-primary' id='calcularVolumenInicialBoyle'>Calcular volumen inicial</button><br><br>
+    <button class='btn btn-primary' id='calcularVolumenFinalBoyle'>Calcular volumen final</button><br><br>
+
+<script>
+  $(document).ready(function(){ calcularBoyle(); });
+
+  QUnit.test("Test", function (assert) {
+    $("#calcularPresionInicialBoyle").click();
+    assert.equal(1,1,"1 is equal to 1");
+  });
+</script>

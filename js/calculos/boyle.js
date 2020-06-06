@@ -1,5 +1,37 @@
 $.getScript("/js/calculos/chequearValores.js", function() {});
 
+/*function obtenerValoresBoyle(){
+  var presionFinal = parseFloat($("#presionFinalBoyle").val());
+  var volumenInicial = parseFloat($("#volumenInicialBoyle").val());
+  var volumenFinal = parseFloat($("#volumenFinalBoyle").val());
+
+  return [presionFinal, volumenInicial, volumenFinal];
+};
+
+function calcularPresionInicialBoyle(magnitudes){
+  if(chequearValores([presionFinal, volumenInicial, volumenFinal]) != true){
+    alert("Un valor no se ha cargado correctamente, por favor intentar de nuevo");
+    throw new Error("ghola");
+  }
+  else{
+    var presionInicial = (presionFinal * volumenFinal) / volumenInicial;
+    return presionInicial;
+  }
+}
+
+function last(){
+  var valores = obtenerValoresBoyle();
+  var resultado = calcularPresionInicialBoyle(valores);
+  alert("La presion inicial es: " + resultado + "ATM");
+}
+
+$('#calcularPresionInicialBoyle').click(function(){
+  last();
+});*/
+
+
+// anterior
+
 function calcularBoyle(){
   $('#calcularPresionInicialBoyle').click(function(){
     var presionFinal = parseFloat($("#presionFinalBoyle").val());
