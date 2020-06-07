@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>QUnit Tests</title>
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/css/qunit.css">
+    <script src="/js/qunit.js"></script>
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <input id='btnSubmit' type='button' hidden='hidden'/>
+    <script src="/js/calculos/boyle.js"></script>
+    <script src="/js/calculos/charles.js"></script>
+    <script src="/js/calculos/ideales.js"></script>
+
+<script>
+
+  QUnit.test("Test de calculadoras", function (assert) {
+    function qUnitBoyle(){
+      var presionInicial = 4;
+      var volumenInicial = 2;
+      var presionFinal = 5;
+      var volumenFinal = 1.6;
+
+      var presionInicialR = calcularMagnitudesBoyle([presionFinal, volumenFinal, volumenInicial])
+      assert.equal(presionInicialR, 4, "(Boyle) La presion inicial debe ser 4 ATM");
+
+      var volumenInicialR = calcularMagnitudesBoyle([presionFinal, volumenFinal, presionInicial])
+      assert.equal(volumenInicialR, 2, "(Boyle) El volumen inicial debe ser 2 L");
+
+      var presionFinalR = calcularMagnitudesBoyle([presionInicial, volumenInicial, volumenFinal])
+      assert.equal(presionFinalR, 5, "(Boyle) La presion final debe ser 5 ATM");
+
+      var volumenFinalR = calcularMagnitudesBoyle([presionInicial, volumenInicial, presionFinal])
+      assert.equal(volumenFinalR, 1.6, "(Boyle) Volumen final debe ser 1.6 L");
+    }
+
+    function qUnitCharles(){
+      var temperaturaInicial = 200;
+      var volumenInicial = 3;
+      var temperaturaFinal = 300;
+      var volumenFinal = 4;
+
+      var temperaturaInicialR = calcularMagnitudesCharles([temperaturaFinal, volumenInicial, volumenFinal])
+      assert.equal(temperaturaInicialR, 225, "(Charles) La temperatura inicial debe ser 225 K");
+
+      var volumenInicialR = calcularMagnitudesCharles([volumenFinal, temperaturaInicial, temperaturaFinal])
+      assert.equal(volumenInicialR, 2.6666666666666665, "(Charles) El volumen inicial debe ser 2.6666666666666665 L");
+
+      var temperaturaFinalR = calcularMagnitudesCharles([volumenFinal, temperaturaInicial, volumenInicial])
+      assert.equal(temperaturaFinalR, 266.6666666666667, "(Charles) La temperatura final debe ser 266.6666666666667 K");
+
+      var volumenFinalR = calcularMagnitudesCharles([temperaturaFinal, volumenInicial, temperaturaInicial])
+      assert.equal(volumenFinalR, 4.5, "(Charles) El volumen final debe ser 4.5 L");
+    }
+
+    function qUnitGasesIdeales(){
+      var temperatura = 300;
+      var volumen = 3;
+      var presion = 2;
+      var numeroMoles = 1.5;
+
+      var temperaturaR = calcularMagnitudesIdeales([volumen, presion, (1/numeroMoles), (1/R)])
+      assert.equal(temperaturaR, 48.750761730652044, "(Gases Ideales) La temperatura debe ser 48.750761730652044 K");
+
+      var volumenR = calcularMagnitudesIdeales([(1/presion), temperatura, numeroMoles, R])
+      assert.equal(volumenR, 18.46125, "(Gases Ideales) El volumen debe ser 18.46125 L");
+
+      var presionR = calcularMagnitudesIdeales([(1/volumen), temperatura, numeroMoles, R])
+      assert.equal(presionR, 12.3075, "(Gases Ideales) La presion debe ser 12.3075 ATM");
+
+      var numeroMolesR = calcularMagnitudesIdeales([volumen, presion, (1/temperatura), (1/R)])
+      assert.equal(numeroMolesR, 0.24375380865326024 , "(Gases Ideales) El numero de moles debe ser 0.24375380865326024");
+    }
+
+    qUnitBoyle();
+    qUnitCharles();
+    qUnitGasesIdeales();
+  });
+</script>
