@@ -27,3 +27,7 @@ function hablitacionBoyle(){
 function habilitacionCharles(){
   habilitacionPorLey(['rbtic', 'rbtfc', 'rbvic', 'rbvfc']);
 }
+
+function habilitacionGasesIdeales(){
+  habilitacionPorLey(['rbnmgi', 'rbtgi', 'rbpgi', 'rbvgi']);
+}

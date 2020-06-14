@@ -8,27 +8,31 @@ $.getScript("/js/habilitaciones/habilitaciones.js", function() {});
 $("#calculadoraLeyDeBoyle").click(function(){
   $("#cuerpo_calculadora").html(""+
   "<h2>Calcular ley de Boyle</h2><br>" +
-  "<div class='form-check form-check-inline'>"+
-    "Presion Inicial(ATM) "+
-    "<input type='number' placeholder='1' id='presionInicialBoyle' step='any' name='rbpib' style='margin-right:10px;'>" +
+  "<div class='form-check form-check-inline'>Presion Inicial(ATM)"+
+    "<input type='number' placeholder='1' id='presionInicialBoyle' step='any' name='rbpib' "+
+    "style='margin-right:10px;'>" +
     "<input class='form-check-input' type='radio' name='inlineRadioOptionsBoyle' id='rbpib' value='option1'>"+
     "<label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br>"+
 
   "<div class='form-check form-check-inline'>"+
-    " <div>Presion Final(ATM) <input type='number' placeholder='2' id='presionFinalBoyle' name='rbpfb' step='any' style='margin-right: 10px;'></div> " +
+    "<div>Presion Final(ATM)"+
+    "<input type='number' placeholder='2' id='presionFinalBoyle' name='rbpfb' step='any' "+
+    "style='margin-right: 10px;'></div> " +
     " <input class='form-check-input' type='radio' name='inlineRadioOptionsBoyle' id='rbpfb' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
-    " <div>Volumen Inicial(L) <input type='number' placeholder='2' id='volumenInicialBoyle' name='rbvib' step='any'></div><br>"+
+    "<div>Volumen Inicial(L)<input type='number' placeholder='2' id='volumenInicialBoyle' name='rbvib' step='any' "+
+    "style='margin-right: 10px;'></div><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptionsBoyle' id='rbvib' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
-    " <div>Volumen Final(L) <input type='number' placeholder='1,5' id='volumenFinalBoyle' name='rbvfb' step='any'></div><br><br>"+
+    "<div>Volumen Final(L)<input type='number' placeholder='1,5' id='volumenFinalBoyle' name='rbvfb' "+
+    "step='any' style='margin-right: 10px;'></div><br><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptionsBoyle' id='rbvfb' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
@@ -99,26 +103,30 @@ $("#calculadoraLeyDeGasesIdeales").click(function(){
   "<h2>Calcular ley de Gases ideales</h2><br>" +
 
   "<div class='form-check form-check-inline'>"+
-    " <div>Numero de moles <input type='number' placeholder='2' id='numeroMolesGasesIdeales' step='any'></div><br>"+
-    " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='radioButtonPIB' value='option1'>"+
+    " <div>Numero de moles <input type='number' placeholder='2' id='numeroMolesGasesIdeales' "+
+    "step='any' name='rbnmgi'></div><br>"+
+    " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='rbnmgi' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
-    " <div>Temperatura(K) <input type='number' placeholder='450' id='temperaturaGasesIdeales' step='any'></div><br>"+
-    " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='radioButtonPIB' value='option1'>"+
+    " <div>Temperatura(K) <input type='number' placeholder='450' id='temperaturaGasesIdeales' "+
+    "step='any' name='rbtgi'></div><br>"+
+    " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='rbtgi' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
-    " <div>Presion(ATM) <input type='number' placeholder='2' id='presionGasesIdeales' step='any'></div><br>"+
-    " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='radioButtonPIB' value='option1'>"+
+    " <div>Presion(ATM) <input type='number' placeholder='2' id='presionGasesIdeales' "+
+    "step='any' name='rbpgi'></div><br>"+
+    " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='rbpgi' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
-    " <div>Volumen(L) <input type='number' placeholder='1,5' id='volumenGasesIdeales' step='any'></div><br><br>"+
-    " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='radioButtonPIB' value='option1'>"+
+    " <div>Volumen(L) <input type='number' placeholder='1,5' id='volumenGasesIdeales' "+
+    "step='any' name='rbvgi'></div><br><br>"+
+    " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='rbvgi' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
@@ -130,5 +138,6 @@ $("#calculadoraLeyDeGasesIdeales").click(function(){
 
   $(document).ready(function(){
     calcularGasesIdeales();
+    habilitacionGasesIdeales();
   });
 });
