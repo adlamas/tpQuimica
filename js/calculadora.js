@@ -58,28 +58,28 @@ $("#calculadoraLeyDeCharles").click(function(){
 
   "<div class='form-check form-check-inline'>"+
     "<div>Temperatura Inicial(K) <input type='number' placeholder='500' id='temperaturaInicialCharles' "+
-    "step='any' name='rbtic' ></div><br>"+
+    "step='any' name='rbtic' style='margin-right: 10px;'></div><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptionsCharles' id='rbtic' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
     " <div>Temperatura Final(K) <input type='number' placeholder='350' id='temperaturaFinalCharles' "+
-    "step='any' name='rbtfc'></div><br>"+
+    "step='any' name='rbtfc' style='margin-right: 10px;'></div><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptionsCharles' id='rbtfc' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
     " <div>Volumen Inicial(L) <input type='number' placeholder='2' id='volumenInicialCharles' "+
-    " step='any' name='rbvic'></div><br>"+
+    " step='any' name='rbvic' style='margin-right: 10px;'></div><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptionsCharles' id='rbvic' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
     " <div>Volumen Final(L) <input type='number' placeholder='1,5' id='volumenFinalCharles' "+
-    "step='any' name='rbvfc' ></div><br><br>"+
+    "step='any' name='rbvfc' style='margin-right: 10px;'></div><br><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptionsCharles' id='rbvfc' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
@@ -104,28 +104,28 @@ $("#calculadoraLeyDeGasesIdeales").click(function(){
 
   "<div class='form-check form-check-inline'>"+
     " <div>Numero de moles <input type='number' placeholder='2' id='numeroMolesGasesIdeales' "+
-    "step='any' name='rbnmgi'></div><br>"+
+    "step='any' name='rbnmgi' style='margin-right: 10px;'></div><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='rbnmgi' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
     " <div>Temperatura(K) <input type='number' placeholder='450' id='temperaturaGasesIdeales' "+
-    "step='any' name='rbtgi'></div><br>"+
+    "step='any' name='rbtgi' style='margin-right: 10px;'></div><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='rbtgi' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
     " <div>Presion(ATM) <input type='number' placeholder='2' id='presionGasesIdeales' "+
-    "step='any' name='rbpgi'></div><br>"+
+    "step='any' name='rbpgi' style='margin-right: 10px;'></div><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='rbpgi' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
 
   "<div class='form-check form-check-inline'>"+
     " <div>Volumen(L) <input type='number' placeholder='1,5' id='volumenGasesIdeales' "+
-    "step='any' name='rbvgi'></div><br><br>"+
+    "step='any' name='rbvgi' style='margin-right: 10px;'></div><br><br>"+
     " <input class='form-check-input' type='radio' name='inlineRadioOptions' id='rbvgi' value='option1'>"+
     " <label class='form-check-label' for='inlineRadio1'></label>"+
   "</div><br><br> "+
